@@ -1,0 +1,7 @@
+package Teste.com.teste.Model;
+
+import java.io.Serializable;
+
+public class Pagamento implements Serializable {
+
+}

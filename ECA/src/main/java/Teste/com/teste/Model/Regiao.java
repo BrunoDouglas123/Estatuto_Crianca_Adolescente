@@ -1,23 +1,35 @@
 package Teste.com.teste.Model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
-@Table(name = "region")
-public class Regiao {
-	
+@Table(name = "regiao")
+public class Regiao implements Serializable {
+	private static final long serialVersionUID = 3005583633988284318L;
+
 	@Id
-	@Column(name = "id_region")
+	@Column(name = "id_regiao")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "", length = 45, nullable = false)
+	@Column(name = "nome", length = 45, nullable = false)
 	private String nome;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "regiao")
+	private List<Estado> estado = new ArrayList<>();
 	
 	public Regiao() {		
 	}
@@ -41,5 +53,9 @@ public class Regiao {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public List<Estado> getEstado() {
+		return estado;
 	}
 }
