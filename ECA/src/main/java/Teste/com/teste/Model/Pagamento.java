@@ -36,7 +36,7 @@ public class Pagamento implements Serializable {
 	@JoinColumn(name = "id_subfuncao")
 	private SubFuncao subfuncao;
 	
-	@ManyToOne
+	@ManyToOne 
 	@JoinColumn(name = "id_programa")
 	private Programa programa;
 	

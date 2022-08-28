@@ -1,0 +1,129 @@
+package Teste.com.teste.DTO;
+
+import Teste.com.teste.Model.Pagamento;
+
+public class PagamentoDTO {
+	
+	private Long id;
+	private Double valor;
+	
+	private CidadeDTO cidade;
+	private FuncaoDTO funcao;
+	private SubFuncaoDTO subfuncao;
+	private ProgramaDTO programa;
+	private AcaoDTO acao;
+	private BeneficiarioDTO beneficiario;
+	private ArquivoDTO arquivo;
+	private FonteDTO fonte;
+	
+	public PagamentoDTO() {		
+	}
+
+	public PagamentoDTO(Pagamento entity) {
+		this.id = entity.getId();
+		this.valor = entity.getValor();
+		this.cidade = new CidadeDTO(entity.getCidade());
+		this.funcao = new FuncaoDTO(entity.getFuncao());
+		this.subfuncao = new SubFuncaoDTO(entity.getSubfuncao());
+		this.programa = new ProgramaDTO(entity.getPrograma());
+		this.acao = new AcaoDTO(entity.getAcao());
+		this.beneficiario = new BeneficiarioDTO(entity.getBeneficiario());
+		this.arquivo = new ArquivoDTO(entity.getArquivo());
+		this.fonte = new FonteDTO(entity.getFonte());
+	}
+	
+	public PagamentoDTO(Long id, Double valor, CidadeDTO cidade, FuncaoDTO funcao,
+			SubFuncaoDTO subfuncao, ProgramaDTO programa, AcaoDTO acao,
+			BeneficiarioDTO beneficiario, ArquivoDTO arquivo, FonteDTO fonte) {
+		this.id = id;
+		this.valor = valor;
+		this.cidade = cidade;
+		this.funcao = funcao;
+		this.subfuncao = subfuncao;
+		this.programa = programa;
+		this.acao = acao;
+		this.beneficiario = beneficiario;
+		this.arquivo = arquivo;
+		this.fonte = fonte;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public CidadeDTO getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(CidadeDTO cidade) {
+		this.cidade = cidade;
+	}
+
+	public FuncaoDTO getFuncao() {
+		return funcao;
+	}
+
+	public void setFuncao(FuncaoDTO funcao) {
+		this.funcao = funcao;
+	}
+
+	public SubFuncaoDTO getSubfuncao() {
+		return subfuncao;
+	}
+
+	public void setSubfuncao(SubFuncaoDTO subfuncao) {
+		this.subfuncao = subfuncao;
+	}
+
+	public ProgramaDTO getPrograma() {
+		return programa;
+	}
+
+	public void setPrograma(ProgramaDTO programa) {
+		this.programa = programa;
+	}
+
+	public AcaoDTO getAcao() {
+		return acao;
+	}
+
+	public void setAcao(AcaoDTO acao) {
+		this.acao = acao;
+	}
+
+	public BeneficiarioDTO getBeneficiario() {
+		return beneficiario;
+	}
+
+	public void setBeneficiario(BeneficiarioDTO beneficiario) {
+		this.beneficiario = beneficiario;
+	}
+
+	public ArquivoDTO getArquivo() {
+		return arquivo;
+	}
+
+	public void setArquivo(ArquivoDTO arquivo) {
+		this.arquivo = arquivo;
+	}
+
+	public FonteDTO getFonte() {
+		return fonte;
+	}
+
+	public void setFonte(FonteDTO fonte) {
+		this.fonte = fonte;
+	}
+}
