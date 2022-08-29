@@ -27,7 +27,7 @@ public class Arquivo implements Serializable {
 	@Column(name = "nome", length = 45, nullable = false)
 	private String nome;
 	
-	@Column(name = "mes", length = 2, nullable = false)
+	@Column(name = "mes", length = 10, nullable = false)
 	private String mes;
 	
 	@Column(name = "ano", length = 4, nullable = false)

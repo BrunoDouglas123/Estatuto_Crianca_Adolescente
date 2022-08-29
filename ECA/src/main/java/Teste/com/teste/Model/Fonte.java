@@ -27,10 +27,10 @@ public class Fonte implements Serializable {
 	@Column(name = "meta", length = 45, nullable = false)
 	private String meta;
 	
-	@Column(name = "origem", length = 2, nullable = false)
+	@Column(name = "origem", length = 8, nullable = false)
 	private String origem;
 	
-	@Column(name = "periodicidade", length = 4, nullable = false)
+	@Column(name = "periodicidade", length = 8, nullable = false)
 	private String periodicidade;
 	
 	@JsonIgnore

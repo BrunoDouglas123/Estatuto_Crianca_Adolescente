@@ -3,3 +3,44 @@ INSERT INTO funcao(nome) VALUES ('imediata');
 INSERT INTO funcao(nome) VALUES ('imediata');
 INSERT INTO funcao(nome) VALUES ('imediata');
 INSERT INTO funcao(nome) VALUES ('imediata');
+
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+
+INSERT INTO beneficiario(nome) VALUES ('Alex');
+INSERT INTO beneficiario(nome) VALUES ('Tod');
+INSERT INTO beneficiario(nome) VALUES ('Carter');
+INSERT INTO beneficiario(nome) VALUES ('Terry');
+INSERT INTO beneficiario(nome) VALUES ('Billy');
+
+INSERT INTO acao(nome) VALUES ('pagamento');
+INSERT INTO acao(nome) VALUES ('pagamento');
+INSERT INTO acao(nome) VALUES ('pagamento');
+INSERT INTO acao(nome) VALUES ('pagamento');
+INSERT INTO acao(nome) VALUES ('pagamento');
+
+INSERT INTO arquivo(nome, mes, ano) VALUES ('crianca', 'janeiro', '2022');
+INSERT INTO arquivo(nome, mes, ano) VALUES ('crianca', 'abril', '2022');
+INSERT INTO arquivo(nome, mes, ano) VALUES ('crianca', 'maio', '2022');
+INSERT INTO arquivo(nome, mes, ano) VALUES ('crianca', 'junho', '2022');
+INSERT INTO arquivo(nome, mes, ano) VALUES ('crianca', 'julho', '2022');
+
+INSERT INTO fonte(meta, origem, periodicidade) VALUES ('educação', 'Link', 'alta');
+INSERT INTO fonte(meta, origem, periodicidade) VALUES ('educação', 'Link', 'alta');
+INSERT INTO fonte(meta, origem, periodicidade) VALUES ('educação', 'Link', 'baixa');
+INSERT INTO fonte(meta, origem, periodicidade) VALUES ('educação', 'Link', 'alta');
+INSERT INTO fonte(meta, origem, periodicidade) VALUES ('educação', 'Link', 'baixa');
+
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
+INSERT INTO programa(nome) VALUES ('auxilio infantil');
