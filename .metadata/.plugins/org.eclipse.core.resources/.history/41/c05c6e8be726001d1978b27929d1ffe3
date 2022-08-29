@@ -1,0 +1,8 @@
+package Teste.com.teste.DTO;
+
+public class RegiaoDTO {
+	
+	private Long id;
+	private String nome;
+
+}

@@ -1,0 +1,17 @@
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+
+INSERT INTO beneficiario(nome) VALUES ('Alex');
+INSERT INTO beneficiario(nome) VALUES ('Tod');
+INSERT INTO beneficiario(nome) VALUES ('Carter');
+INSERT INTO beneficiario(nome) VALUES ('Terry');
+INSERT INTO beneficiario(nome) VALUES ('Billy');

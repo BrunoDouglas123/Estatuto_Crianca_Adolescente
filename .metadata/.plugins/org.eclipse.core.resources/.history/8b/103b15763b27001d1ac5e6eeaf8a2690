@@ -1,0 +1,62 @@
+package Teste.com.teste.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import Teste.com.teste.DTO.SubFuncaoDTO;
+import Teste.com.teste.Model.SubFuncao;
+import Teste.com.teste.Service.SubFuncaoService;
+
+public class SubFuncaoController {
+	
+	@Autowired
+	private SubFuncaoService service;
+	
+	@GetMapping
+	public ResponseEntity<List<SubFuncaoDTO>> findAll() {
+		System.out.println("List of Functions:");
+		List<SubFuncaoDTO> list = service.findAll();
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<SubFuncaoDTO> findById(@PathVariable Long id) {
+		System.out.println("Function:");
+		SubFuncaoDTO v = new SubFuncaoDTO(service.findById(id));
+		return ResponseEntity.ok(v);
+	}
+	
+	@PostMapping
+	public ResponseEntity<SubFuncao> save(@RequestBody SubFuncao SubFuncao) throws Exception {
+		try {
+			SubFuncao save = service.save(SubFuncao);
+			System.out.println("New Function Saved Sucessfully.");
+			return new ResponseEntity<>(save, null, HttpStatus.CREATED);
+		}
+		catch(Exception ex) {
+			throw new Exception(ex);
+		}
+	}
+	
+	@PutMapping("/{id}")
+	public ResponseEntity<SubFuncao> update(@PathVariable Long id,@RequestBody SubFuncao SubFuncao) {
+		System.out.println("Function Updated Sucessfully.");
+		return ResponseEntity.ok(service.update(id, SubFuncao));
+	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<?> delete(@PathVariable Long id) {
+		System.out.println("Function Deleted Sucessfully.");
+		service.delete(id);
+		return ResponseEntity.ok().build();
+	}
+}

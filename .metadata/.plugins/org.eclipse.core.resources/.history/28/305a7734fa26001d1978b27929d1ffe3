@@ -1,0 +1,23 @@
+package Teste.com.teste.DTO;
+
+import Teste.com.teste.Model.Estado;
+
+public class EstadoDTO {
+	
+	private Long id;
+	private String nome;
+	private String uf;
+	
+	private RegiaoDTO regiao;
+	
+	public EstadoDTO() {		
+	}
+
+	public EstadoDTO(Estado entity) {
+		this.id = entity.getId();
+		this.nome = entity.getNome();
+		this.uf = entity.getUf();
+		this.regiao = new RegiaoDTO(entity.getRegiao());
+	}
+
+}

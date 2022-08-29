@@ -64,7 +64,7 @@ public class SubFuncaoController {
 	@PutMapping("/{id}")
 	public ResponseEntity<SubFuncao> update(@PathVariable Long id,@RequestBody SubFuncao SubFuncao) throws Exception {
 		try {
-			System.out.println("SubFunction Updated Sucessfully.");
+			System.out.println("SubFunction " + id + " Updated Sucessfully.");
 			return ResponseEntity.ok(service.update(id, SubFuncao));
 		}
 		catch(Exception ex) {
@@ -75,7 +75,7 @@ public class SubFuncaoController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable Long id) throws Exception {
 		try {
-			System.out.println("SubFunction Deleted Sucessfully.");
+			System.out.println("SubFunction " + id + " Deleted Sucessfully.");
 			service.delete(id);
 			return ResponseEntity.ok().build();
 		}

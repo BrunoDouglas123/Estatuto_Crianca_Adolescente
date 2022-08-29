@@ -1,0 +1,29 @@
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+
+INSERT INTO beneficiario(nome) VALUES ('Alex');
+INSERT INTO beneficiario(nome) VALUES ('Tod');
+INSERT INTO beneficiario(nome) VALUES ('Carter');
+INSERT INTO beneficiario(nome) VALUES ('Terry');
+INSERT INTO beneficiario(nome) VALUES ('Billy');
+
+INSERT INTO acao(nome) VALUES ('pagamento');
+INSERT INTO acao(nome) VALUES ('pagamento');
+INSERT INTO acao(nome) VALUES ('pagamento');
+INSERT INTO acao(nome) VALUES ('pagamento');
+INSERT INTO acao(nome) VALUES ('pagamento');
+
+INSERT INTO fonte(meta, origem, periciocidade) VALUES ('educação', 'https://www.gov.br/mdh/pt-br/navegue-por-temas/crianca-e-adolescente/publicacoes/o-estatuto-da-crianca-e-do-adolescente', 'alta');
+INSERT INTO fonte(meta, origem, periciocidade) VALUES ('educação', 'https://www.gov.br/mdh/pt-br/navegue-por-temas/crianca-e-adolescente/publicacoes/o-estatuto-da-crianca-e-do-adolescente', 'alta');
+INSERT INTO fonte(meta, origem, periciocidade) VALUES ('educação', 'https://www.gov.br/mdh/pt-br/navegue-por-temas/crianca-e-adolescente/publicacoes/o-estatuto-da-crianca-e-do-adolescente', 'baixa');
+INSERT INTO fonte(meta, origem, periciocidade) VALUES ('educação', 'https://www.gov.br/mdh/pt-br/navegue-por-temas/crianca-e-adolescente/publicacoes/o-estatuto-da-crianca-e-do-adolescente', 'alta');
+INSERT INTO fonte(meta, origem, periciocidade) VALUES ('educação', 'https://www.gov.br/mdh/pt-br/navegue-por-temas/crianca-e-adolescente/publicacoes/o-estatuto-da-crianca-e-do-adolescente', 'baixa');

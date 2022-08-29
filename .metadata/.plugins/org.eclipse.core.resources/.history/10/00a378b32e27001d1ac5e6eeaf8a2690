@@ -1,0 +1,85 @@
+package Teste.com.teste.Model;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+@Table(name = "fonte")
+public class Fonte implements Serializable {
+	private static final long serialVersionUID = -1851639890815708730L;
+
+	@Id
+	@Column(name = "id_fonte")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(name = "meta", length = 45, nullable = false)
+	private String meta;
+	
+	@Column(name = "origem", length = 2, nullable = false)
+	private String origem;
+	
+	@Column(name = "periodicidade", length = 8, nullable = false)
+	private String periodicidade;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "fonte")
+	private List<Pagamento> pagamento = new ArrayList<>();
+	
+	public Fonte() {		
+	}
+
+	public Fonte(Long id, String meta, String origem, String periodicidade) {
+		this.id = id;
+		this.meta = meta;
+		this.origem = origem;
+		this.periodicidade = periodicidade;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getMeta() {
+		return meta;
+	}
+
+	public void setMeta(String meta) {
+		this.meta = meta;
+	}
+
+	public String getOrigem() {
+		return origem;
+	}
+
+	public void setOrigem(String origem) {
+		this.origem = origem;
+	}
+
+	public String getPeriodicidade() {
+		return periodicidade;
+	}
+
+	public void setPeriodicidade(String periodicidade) {
+		this.periodicidade = periodicidade;
+	}
+
+	public List<Pagamento> getPagamento() {
+		return pagamento;
+	}
+}

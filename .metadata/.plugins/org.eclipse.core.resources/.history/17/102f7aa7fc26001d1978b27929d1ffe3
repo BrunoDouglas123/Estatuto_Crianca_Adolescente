@@ -1,0 +1,38 @@
+package Teste.com.teste.DTO;
+
+public class PagamentoDTO {
+	
+	private Long id;
+	private Double valor;
+	
+	private CidadeDTO cidade;
+	private FuncaoDTO funcao;
+	private SubFuncaoDTO subfuncao;
+	private ProgramaDTO programa;
+	private AcaoDTO acao;
+	private BeneficiarioDTO beneficiario;
+	private ArquivoDTO arquivo;
+	private FonteDTO fonte;
+	
+	public PagamentoDTO() {		
+	}
+
+	public PagamentoDTO(Long id, Double valor, CidadeDTO cidade, FuncaoDTO funcao,
+			SubFuncaoDTO subfuncao, ProgramaDTO programa, AcaoDTO acao,
+			BeneficiarioDTO beneficiario, ArquivoDTO arquivo, FonteDTO fonte) {
+		super();
+		this.id = id;
+		this.valor = valor;
+		this.cidade = cidade;
+		this.funcao = funcao;
+		this.subfuncao = subfuncao;
+		this.programa = programa;
+		this.acao = acao;
+		this.beneficiario = beneficiario;
+		this.arquivo = arquivo;
+		this.fonte = fonte;
+	}
+	
+	
+
+}

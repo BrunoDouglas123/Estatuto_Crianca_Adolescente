@@ -1,0 +1,13 @@
+Lista do Banco de Dados do Estatuto da Criança e do Adolescente:
+
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+INSERT INTO funcao(nome) VALUES ('imediata');
+
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');
+INSERT INTO subfuncao(nome) VALUES ('imediata');

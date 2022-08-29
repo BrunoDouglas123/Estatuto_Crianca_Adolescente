@@ -34,7 +34,7 @@ public class FuncaoController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<FuncaoDTO> findById(@PathVariable Long id) {
-		System.out.println("Function:");
+		System.out.println("Function: " + id);
 		FuncaoDTO v = new FuncaoDTO(service.findById(id));
 		return ResponseEntity.ok(v);
 	}
@@ -53,13 +53,13 @@ public class FuncaoController {
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<Funcao> update(@PathVariable Long id,@RequestBody Funcao Funcao) {
-		System.out.println("Function Updated Sucessfully.");
+		System.out.println("Function " + id + " Updated Sucessfully.");
 		return ResponseEntity.ok(service.update(id, Funcao));
 	}
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable Long id) {
-		System.out.println("Function Deleted Sucessfully.");
+		System.out.println("Function " + id + " Deleted Sucessfully.");
 		service.delete(id);
 		return ResponseEntity.ok().build();
 	}
