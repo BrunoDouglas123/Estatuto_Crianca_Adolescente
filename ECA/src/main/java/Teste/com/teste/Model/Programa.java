@@ -1,6 +1,5 @@
 package Teste.com.teste.Model;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,20 +15,21 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "programa")
-public class Programa implements Serializable {
-	private static final long serialVersionUID = -95262143935443688L;
+public class Programa {
 
 	@Id
-	@Column(name = "id_programa")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "nome", length = 45, nullable = false)
+	@Column(name = "nome", length = 45)
 	private String nome;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "programa")
 	private List<Pagamento> pagamento = new ArrayList<>();
+	
+	public Programa() {		
+	}
 
 	public Programa(Long id, String nome) {
 		this.id = id;
